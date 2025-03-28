@@ -95,7 +95,7 @@
             bindings = <
 &trans   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                           &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &kp RBKT
 &trans      &hml LCTRL N1       &hml LALT N2         &hml LGUI N3         &hml LSFT N4    &kp N5       &mmv MOVE_LEFT  &mkp RCLK       &mmv MOVE_RIGHT  &kp  N6    &hmr RSFT N7  &hmr RGUI N8  &hmr RALT N9  &hmr RCTRL N0   &kp BSLH
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                           &mmv MOVE_DOWN                   &kp F7     &kp F8     &kp F9    &kp F10   &kp F11   &kp EQUAL
+&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6       &trans           &mmv MOVE_DOWN                   &kp F7     &kp F8     &kp F9    &kp F10   &kp F11   &kp EQUAL
                                          &trans        &trans        &mo 2                                                                          &mo 2          &trans        &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -104,7 +104,7 @@
         raise_layer {
             display-name = "Setting";
             bindings = <
-&trans  &trans      &trans       &trans  &trans   &trans                        &mmv MOVE_UP                     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans      &trans       &trans  &trans   &studio_unlock                        &mmv MOVE_UP                     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &out OUT_USB  &out OUT_BLE
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE   &mmv MOVE_DOWN               &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans   &trans
                                     &trans     &trans     &kp SPACE                                                            &kp RET    &trans     &trans
@@ -117,7 +117,7 @@
             bindings = <
 &trans     &trans     &trans    &trans    &trans    &trans                                  &mmv MOVE_UP                     &trans     &trans     &trans    &trans    &trans    &trans
 &trans     &kp LCTRL     &kp LALT    &kp LGUI    &kp LSFT    &trans                &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
-&trans     &trans     &trans    &trans    &trans    &trans                    &mmv MOVE_DOWN                   &trans     &trans     &trans    &trans    &trans    &trans
+&trans     &trans     &trans    &trans    &trans    &trans   &trans                 &mmv MOVE_DOWN                   &trans     &trans     &trans    &trans    &trans    &trans
                                 &trans      &trans      &trans                                                                   &trans       &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
