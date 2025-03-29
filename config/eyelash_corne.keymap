@@ -17,6 +17,10 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // Right-hand keys.
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // Thumb keys.
 
+#define TAPPING_TERM_MS 180
+#define QUICK_TAP_MS 100
+#define REQUIRE_PRIOR_IDLE_MS 140
+#define REQUIRE_PRIOR_IDLE_MS_SHIFT 80
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -41,9 +45,9 @@
             label = "HOME_ROW_MODS_LEFT";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <140>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
@@ -54,9 +58,9 @@
             label = "HOME_ROW_MODS_RIGHT";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <140>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
@@ -67,9 +71,9 @@
             label = "HOME_ROW_MODS_LEFT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <80>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS_SHIFT>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
@@ -79,9 +83,9 @@
             label = "HOME_ROW_MODS_RIGHT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <80>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS_SHIFT>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
@@ -107,10 +111,10 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESC    &kp Q  &kp W      &kp E     &kp R  &kp T                              &mmv MOVE_UP                      &kp Y        &kp U  &kp I      &kp O    &kp P     &kp LBKT
-&kp TAB    &hml LCTRL A  &hml LALT S  &hml LGUI D  &hmls LSFT F  &kp G      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp H        &hmrs RSFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI  &kp SQT
-&hml LSFT GRAVE  &lt 3 Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &mmv MOVE_DOWN                    &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 FSLH  &hmr RSFT MINUS
-                             &kp BSPC  &kp SPACE  &lt 1 DEL                                                          &lt 1 ESC  &hmr LG(LC(LA(LSFT))) ENTER  &mo 3
+&kp ESC            &kp Q            &kp W            &kp E            &kp R            &kp T                        &mmv MOVE_UP                        &kp Y            &kp U            &kp I            &kp O            &kp P            &kp LBKT
+&kp TAB            &hml LCTRL A     &hml LALT S      &hml LGUI D      &hmls LSFT F     &kp G    &mmv MOVE_LEFT      &mkp LCLK      &mmv MOVE_RIGHT      &kp H            &hmrs RSFT J     &hmr RGUI K      &hmr RALT L      &hmr RCTRL SEMI  &kp SQT
+&hml LSFT GRAVE    &lt 3 Z          &kp X            &kp C            &kp V            &kp B    &kp SPACE           &mmv MOVE_DOWN                      &kp N            &kp M            &kp COMMA        &kp DOT          &lt 3 FSLH       &hmr RSFT MINUS
+                                                     &kp BSPC         &kp SPACE        &lt 1 DEL                                                        &lt 1 ESC        &hmr LG(LC(LA(LSFT))) ENTER  &mo 3
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -118,10 +122,10 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&trans   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                           &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &kp RBKT
-&caps_word      &hml LCTRL N1       &hml LALT N2         &hml LGUI N3         &hmls LSFT N4    &kp N5       &kp LC(LS(TAB))  &mkp RCLK &kp LC(TAB)  &kp  N6    &hmrs RSFT N7  &hmr RGUI N8  &hmr RALT N9  &hmr RCTRL N0   &kp BSLH
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6       &trans           &mmv MOVE_DOWN                   &kp F7     &kp F8     &kp F9    &kp F10   &kp F11   &kp EQUAL
-                                         &trans        &trans        &mo 2                                                                          &mo 2          &trans        &trans
+&trans            &kp EXCL          &kp AT           &kp HASH         &kp DOLLAR       &kp PRCNT                    &mmv MOVE_UP                        &kp CARET        &kp AMPS          &kp STAR         &kp LPAR         &kp RPAR        &kp RBKT
+&caps_word        &hml LCTRL N1     &hml LALT N2     &hml LGUI N3     &hmls LSFT N4    &kp N5    &kp LC(LS(TAB))    &mkp RCLK      &kp LC(TAB)          &kp  N6          &hmrs RSFT N7     &hmr RGUI N8     &hmr RALT N9     &hmr RCTRL N0   &kp BSLH
+&kp F1            &kp F2            &kp F3           &kp F4           &kp F5           &kp F6    &trans             &mmv MOVE_DOWN                      &kp F7           &kp F8            &kp F9           &kp F10          &kp F11         &kp EQUAL
+                                                     &trans           &trans           &mo 2                                                            &mo 2            &trans            &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -130,9 +134,9 @@
             display-name = "Settings";
             bindings = <
 &trans  &trans      &trans       &trans  &trans   &studio_unlock                        &mmv MOVE_UP                     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &out OUT_USB  &out OUT_BLE
+&trans  &trans    &trans     &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans   &trans  &out OUT_USB  &out OUT_BLE
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE   &mmv MOVE_DOWN               &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans   &trans
-                                    &trans     &trans     &kp SPACE                                                            &kp RET    &trans     &trans
+                                    &trans     &trans     &trans                                                            &trans    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
