@@ -17,8 +17,7 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // Right-hand keys.
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // Thumb keys.
 
-#define TAPPING_TERM_MS 280
-#define TAPPING_TERM_MS_SHIFT 180
+#define TAPPING_TERM_MS 180
 #define QUICK_TAP_MS 100
 #define REQUIRE_PRIOR_IDLE_MS 140
 #define REQUIRE_PRIOR_IDLE_MS_SHIFT 80
@@ -72,7 +71,7 @@
             label = "HOME_ROW_MODS_LEFT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <TAPPING_TERM_MS_SHIFT>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS_SHIFT>;
             bindings = <&kp>, <&kp>;
@@ -84,7 +83,7 @@
             label = "HOME_ROW_MODS_RIGHT";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <TAPPING_TERM_MS_SHIFT>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS_SHIFT>;
             bindings = <&kp>, <&kp>;
