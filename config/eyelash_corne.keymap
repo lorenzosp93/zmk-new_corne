@@ -20,7 +20,6 @@
 #define TAPPING_TERM_MS 180
 #define QUICK_TAP_MS 100
 #define REQUIRE_PRIOR_IDLE_MS 120
-#define REQUIRE_PRIOR_IDLE_MS_SHIFT 0
 
 // Layers
 #define QWERTY 0
@@ -80,7 +79,6 @@
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS_SHIFT>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
@@ -92,7 +90,6 @@
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
-            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS_SHIFT>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
