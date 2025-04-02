@@ -18,7 +18,7 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // Thumb keys.
 
 #define TAPPING_TERM_MS 180
-#define QUICK_TAP_MS 100
+#define QUICK_TAP_MS 80
 #define REQUIRE_PRIOR_IDLE_MS 120
 
 // Layers
@@ -50,7 +50,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MODS_LEFT";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MODS_RIGHT";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
