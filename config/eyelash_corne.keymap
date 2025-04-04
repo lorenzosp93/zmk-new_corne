@@ -18,7 +18,7 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // Thumb keys.
 
 #define TAPPING_TERM_MS 180
-#define TAPPING_TERM_SLOW_MS 180
+#define TAPPING_TERM_SLOW_MS 220
 #define QUICK_TAP_MS 80
 #define REQUIRE_PRIOR_IDLE_MS 120
 
