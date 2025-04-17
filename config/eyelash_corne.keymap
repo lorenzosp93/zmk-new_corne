@@ -141,7 +141,7 @@
             bindings = <
 &trans            &kp EXCL          &kp AT           &kp HASH         &kp DOLLAR       &kp PRCNT                    &mmv MOVE_UP                        &kp CARET        &kp AMPS          &kp STAR         &kp LPAR         &kp RPAR        &kp RBKT
 &kp CAPS        &hml LCTRL N1     &hml LALT N2     &hml LGUI N3     &hmls LSFT N4    &kp N5    &kp LC(LS(TAB))    &mkp RCLK      &kp LC(TAB)          &kp  N6          &hmrs RSFT N7     &hmr RGUI N8     &hmr RALT N9     &hmr RCTRL N0   &kp BSLH
-&caps_word        &kp F1            &kp F2            &kp F3           &kp F4          &kp F5      &trans             &mmv MOVE_DOWN                    &kp F6           &kp F7            &kp F8           &kp DOT          &kp FSLH        &kp EQUAL
+&caps_word        &kp LBKT            &kp LS(LBKT)            &kp LS(RBKT)           &kp RBKT          &kp GRV      &trans             &mmv MOVE_DOWN                    &kp SQT           &kp MINUS            &trans           &trans          &trans        &kp EQUAL
                                                      &mo SETTINGS     &trans           &trans                                                           &trans           &trans            &mo SETTINGS
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -150,8 +150,8 @@
         raise_layer {
             display-name = "Settings";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                 &mmv MOVE_UP                      &studio_unlock  &trans      &trans       &trans  &to COLEMAK &to QWERTY   
-&trans  &trans    &trans     &trans  &trans  &trans            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans   &trans  &out OUT_USB  &out OUT_BLE
+&kp F1            &kp F2            &kp F3           &kp F4          &kp F5  &kp F6                 &mmv MOVE_UP                      &kp F7            &kp F8      &kp F9       &F10  &to COLEMAK &to QWERTY   
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans   &trans  &out OUT_USB  &out OUT_BLE
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE   &mmv MOVE_DOWN               &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans   &trans
                                     &trans     &trans     &trans                                                            &trans    &trans     &trans
             >;
