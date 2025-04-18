@@ -19,7 +19,7 @@
 
 #define TAPPING_TERM_MS 180
 #define TAPPING_TERM_SLOW_MS 220
-#define QUICK_TAP_MS 80
+#define QUICK_TAP_MS 100
 #define REQUIRE_PRIOR_IDLE_MS 120
 
 // Layers
@@ -28,6 +28,7 @@
 #define LOWER 2
 #define SETTINGS 3
 #define MOVEMENT 4
+
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -116,10 +117,10 @@
         qwerty_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC            &kp Q            &kp W            &kp E            &kp R            &kp T                        &mmv MOVE_UP                        &kp Y            &kp U            &kp I            &kp O            &kp P            &kp LBKT
-&kp TAB            &hml LCTRL A     &hml LALT S      &hml LGUI D      &hmls LSFT F     &kp G    &mmv MOVE_LEFT      &mkp LCLK      &mmv MOVE_RIGHT      &kp H            &hmrs RSFT J     &hmr RGUI K      &hmr RALT L      &hmr RCTRL SEMI  &kp SQT
-&hml LSFT GRAVE    &lt MOVEMENT Z          &kp X            &kp C            &kp V            &kp B    &kp SPACE           &mmv MOVE_DOWN                      &kp N            &kp M            &kp COMMA        &kp DOT          &lt MOVEMENT FSLH       &hmr RSFT MINUS
-                                                     &lt LOWER DEL        &lt LOWER BSPC         &kp SPACE                                                        &hmr LG(LC(LA(LSFT))) ENTER       &mo LOWER            &lt LOWER ESC        
+                &kp ESC            &kp Q            &kp W            &kp E            &kp R            &kp T                        &mmv MOVE_UP                        &kp Y            &kp U            &kp I            &kp O            &kp P            &kp LBKT
+                &kp TAB            &hml LCTRL A     &hml LALT S      &hml LGUI D      &hmls LSFT F     &kp G    &mmv MOVE_LEFT      &mkp LCLK      &mmv MOVE_RIGHT      &kp H            &hmrs RSFT J     &hmr RGUI K      &hmr RALT L      &hmr RCTRL SEMI  &kp SQT
+                &hml LSFT GRAVE    &lt MOVEMENT Z          &kp X            &kp C            &kp V            &kp B    &kp SPACE           &mmv MOVE_DOWN                      &kp N            &kp M            &kp COMMA        &kp DOT          &lt MOVEMENT FSLH       &hmr RSFT MINUS
+                                                                     &lt LOWER DEL        &lt LOWER BSPC         &kp SPACE                                                        &hmr MOD_LGUI|MOD_LCTL|MOD_LALT|MOD_LSFT ENTER       &mo LOWER            &lt LOWER ESC        
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -127,10 +128,10 @@
         colemak_layer {
             display-name = "CMK-DH";
             bindings = <
-&kp ESC            &kp Q            &kp W            &kp F            &kp P            &kp B                        &mmv MOVE_UP                        &kp J            &kp L            &kp U            &kp Y            &kp SEMI            &kp LBKT
-&kp TAB            &hml LCTRL A     &hml LALT R      &hml LGUI S      &hmls LSFT T     &kp G    &mmv MOVE_LEFT      &mkp LCLK      &mmv MOVE_RIGHT      &kp M            &hmrs RSFT N     &hmr RGUI E      &hmr RALT I      &hmr RCTRL O  &kp SQT
-&hml LSFT GRAVE    &lt MOVEMENT Z          &kp X            &kp C            &kp D            &kp V    &kp SPACE           &mmv MOVE_DOWN                      &kp K            &kp H            &kp COMMA        &kp DOT          &lt MOVEMENT FSLH       &hmr RSFT MINUS
-                                                     &lt LOWER DEL        &lt LOWER BSPC         &kp SPACE                                                        &hmr LG(LC(LA(LSFT))) ENTER       &mo LOWER            &lt LOWER ESC        
+                &kp ESC            &kp Q            &kp W            &kp F            &kp P            &kp B                        &mmv MOVE_UP                        &kp J            &kp L            &kp U            &kp Y            &kp SEMI            &kp LBKT
+                &kp TAB            &hml LCTRL A     &hml LALT R      &hml LGUI S      &hmls LSFT T     &kp G    &mmv MOVE_LEFT      &mkp LCLK      &mmv MOVE_RIGHT      &kp M            &hmrs RSFT N     &hmr RGUI E      &hmr RALT I      &hmr RCTRL O  &kp SQT
+                &hml LSFT GRAVE    &lt MOVEMENT Z          &kp X            &kp C            &kp D            &kp V    &kp SPACE           &mmv MOVE_DOWN                      &kp K            &kp H            &kp COMMA        &kp DOT          &lt MOVEMENT FSLH       &hmr RSFT MINUS
+                                                                     &lt LOWER DEL        &lt LOWER BSPC         &kp SPACE                                                        &hmr MOD_LGUI|MOD_LCTL|MOD_LALT|MOD_LSFT ENTER       &mo LOWER            &lt LOWER ESC        
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -139,10 +140,10 @@
         lower_layer {
             display-name = "LWR";
             bindings = <
-&trans            &kp EXCL          &kp AT           &kp HASH         &kp DOLLAR       &kp PRCNT                    &mmv MOVE_UP                        &kp CARET        &kp AMPS          &kp STAR         &kp LPAR         &kp RPAR        &kp RBKT
-&kp CAPS        &hml LCTRL N1     &hml LALT N2     &hml LGUI N3     &hmls LSFT N4    &kp N5    &kp LC(LS(TAB))    &mkp RCLK      &kp LC(TAB)            &kp  N6          &hmrs RSFT N7     &hmr RGUI N8     &hmr RALT N9     &hmr RCTRL N0   &kp BSLH
-&caps_word        &kp LBKT          &kp LBRC         &kp RBRC         &kp RBKT         &kp GRV      &trans       &mmv MOVE_DOWN                         &kp SQT          &kp MINUS         &trans           &trans           &trans          &kp EQUAL
-                                                     &mo SETTINGS     &mo SETTINGS           &trans                                                           &trans           &mo SETTINGS            &mo SETTINGS
+                &trans            &kp EXCL          &kp AT           &kp HASH         &kp DOLLAR       &kp PRCNT                    &mmv MOVE_UP                        &kp CARET        &kp AMPS          &kp STAR         &kp LPAR         &kp RPAR        &kp RBKT
+                &kp CAPS        &hml LCTRL N1     &hml LALT N2     &hml LGUI N3     &hmls LSFT N4    &kp N5    &kp LC(LS(TAB))    &mkp RCLK      &kp LC(TAB)            &kp  N6          &hmrs RSFT N7     &hmr RGUI N8     &hmr RALT N9     &hmr RCTRL N0   &kp BSLH
+                &caps_word        &kp LBKT          &kp LBRC         &kp RBRC         &kp RBKT         &kp GRV      &trans       &mmv MOVE_DOWN                         &kp SQT          &kp MINUS          &trans           &trans           &trans          &kp EQUAL
+                                                                     &mo SETTINGS     &mo SETTINGS           &trans                                                           &trans           &mo SETTINGS            &mo SETTINGS
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -150,10 +151,10 @@
         raise_layer {
             display-name = "SET";
             bindings = <
-&kp F1            &kp F2            &kp F3           &kp F4          &kp F5  &kp F6                 &mmv MOVE_UP                      &kp F7            &kp F8      &kp F9       &F10  &to COLEMAK &to QWERTY   
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans   &trans  &out OUT_USB  &out OUT_BLE
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE   &mmv MOVE_DOWN               &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans   &trans
-                                    &trans     &trans     &trans                                                            &trans    &trans     &trans
+                &kp F1            &kp F2            &kp F3           &kp F4          &kp F5  &kp F6                 &mmv MOVE_UP                      &kp F7            &kp F8      &kp F9       &F10  &to COLEMAK &to QWERTY   
+                &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans   &trans  &out OUT_USB  &out OUT_BLE
+                &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE   &mmv MOVE_DOWN               &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans   &trans
+                                                    &trans     &trans     &trans                                                            &trans    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -161,10 +162,10 @@
         movement_layer {
             display-name = "NAV";
             bindings = <
-&trans     &trans     &trans    &trans    &trans    &trans                                  &msc SCRL_UP                     &trans     &trans     &trans    &trans    &trans    &trans
-&trans     &kp LCTRL     &kp LALT    &kp LGUI    &kp LSFT    &trans                &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &mkp MB4
-&trans     &trans     &trans    &trans    &trans    &trans   &trans                 &msc SCRL_DOWN                   &trans     &trans     &trans    &trans    &trans    &mkp MB5
-                                &trans      &trans      &trans                                                                   &trans       &trans     &trans
+                &trans     &trans     &trans    &trans    &trans    &trans                                  &msc SCRL_UP                     &trans     &trans     &trans    &trans    &trans    &trans
+                &trans     &kp LCTRL     &kp LALT    &kp LGUI    &kp LSFT    &trans                &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &mkp MB4
+                &trans     &trans     &trans    &trans    &trans    &trans   &trans                 &msc SCRL_DOWN                   &trans     &trans     &trans    &trans    &trans    &mkp MB5
+                                                &trans      &trans      &trans                                                                   &trans       &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
