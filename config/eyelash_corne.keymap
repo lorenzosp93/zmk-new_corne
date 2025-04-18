@@ -125,7 +125,7 @@
         };
 
         colemak_layer {
-            display-name = "COLEMAK";
+            display-name = "CMK-DH";
             bindings = <
 &kp ESC            &kp Q            &kp W            &kp F            &kp P            &kp B                        &mmv MOVE_UP                        &kp J            &kp L            &kp U            &kp Y            &kp SEMI            &kp LBKT
 &kp TAB            &hml LCTRL A     &hml LALT R      &hml LGUI S      &hmls LSFT T     &kp G    &mmv MOVE_LEFT      &mkp LCLK      &mmv MOVE_RIGHT      &kp M            &hmrs RSFT N     &hmr RGUI E      &hmr RALT I      &hmr RCTRL O  &kp SQT
@@ -137,18 +137,18 @@
 
 
         lower_layer {
-            display-name = "Lower";
+            display-name = "LWR";
             bindings = <
 &trans            &kp EXCL          &kp AT           &kp HASH         &kp DOLLAR       &kp PRCNT                    &mmv MOVE_UP                        &kp CARET        &kp AMPS          &kp STAR         &kp LPAR         &kp RPAR        &kp RBKT
 &kp CAPS        &hml LCTRL N1     &hml LALT N2     &hml LGUI N3     &hmls LSFT N4    &kp N5    &kp LC(LS(TAB))    &mkp RCLK      &kp LC(TAB)            &kp  N6          &hmrs RSFT N7     &hmr RGUI N8     &hmr RALT N9     &hmr RCTRL N0   &kp BSLH
 &caps_word        &kp LBKT          &kp LBRC         &kp RBRC         &kp RBKT         &kp GRV      &trans       &mmv MOVE_DOWN                         &kp SQT          &kp MINUS         &trans           &trans           &trans          &kp EQUAL
-                                                     &mo SETTINGS     &trans           &trans                                                           &trans           &trans            &mo SETTINGS
+                                                     &mo SETTINGS     &mo SETTINGS           &trans                                                           &trans           &mo SETTINGS            &mo SETTINGS
             >;
             sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
-            display-name = "Settings";
+            display-name = "SET";
             bindings = <
 &kp F1            &kp F2            &kp F3           &kp F4          &kp F5  &kp F6                 &mmv MOVE_UP                      &kp F7            &kp F8      &kp F9       &F10  &to COLEMAK &to QWERTY   
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans   &trans  &out OUT_USB  &out OUT_BLE
@@ -158,8 +158,8 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
-            display-name = "Movement";
+        movement_layer {
+            display-name = "NAV";
             bindings = <
 &trans     &trans     &trans    &trans    &trans    &trans                                  &msc SCRL_UP                     &trans     &trans     &trans    &trans    &trans    &trans
 &trans     &kp LCTRL     &kp LALT    &kp LGUI    &kp LSFT    &trans                &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &mkp MB4
