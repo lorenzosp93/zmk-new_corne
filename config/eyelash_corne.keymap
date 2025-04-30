@@ -130,7 +130,7 @@
 &kp ESC            &kp Q            &kp W            &kp F            &kp P            &kp B                        &mmv MOVE_UP                        &kp J            &kp L            &kp U            &kp Y            &kp SEMI            &kp LBKT
 &kp TAB            &hml LCTRL A     &hml LALT R      &hml LGUI S      &hmls LSFT T     &kp G    &mmv MOVE_LEFT      &mkp LCLK      &mmv MOVE_RIGHT      &kp M            &hmrs RSFT N     &hmr RGUI E      &hmr RALT I      &hmr RCTRL O  &kp SQT
 &hml LSFT GRAVE    &lt MOVEMENT Z          &kp X            &kp C            &kp D            &kp V    &kp SPACE           &mmv MOVE_DOWN                      &kp K            &kp H            &kp COMMA        &kp DOT          &lt MOVEMENT FSLH       &hmr RSFT MINUS
-                                                     &lt LOWER DEL        &lt LOWER BSPC         &kp SPACE                                                        &hmr LG(LC(LA(LSFT))) ENTER       &mo LOWER            &lt LOWER ESC        
+                                                     &lt LGUI DEL        &lt LOWER BSPC         &kp SPACE                                                        &hmr LG(LC(LA(LSFT))) ENTER       &lt LOWER ESC            &lt RGUI ESC        
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -142,7 +142,7 @@
 &trans            &kp EXCL          &kp AT           &kp HASH         &kp DOLLAR       &kp PRCNT                    &mmv MOVE_UP                        &kp CARET        &kp AMPS          &kp STAR         &kp LPAR         &kp RPAR        &kp RBKT
 &kp CAPS        &hml LCTRL N1     &hml LALT N2     &hml LGUI N3     &hmls LSFT N4    &kp N5    &kp LC(LS(TAB))    &mkp RCLK      &kp LC(TAB)          &kp  N6          &hmrs RSFT N7     &hmr RGUI N8     &hmr RALT N9     &hmr RCTRL N0   &kp BSLH
 &caps_word        &kp LBKT            &kp LBRC            &kp RBRC           &kp RBKT          &kp GRAVE      &trans             &mmv MOVE_DOWN                    &kp SQT           &kp MINUS            &trans           &trans          &trans        &kp EQUAL
-                                                     &mo SETTINGS     &trans           &trans                                                           &trans           &trans            &mo SETTINGS
+                                                     &trans           &mo SETTINGS     &trans                                                           &trans            &mo SETTINGS           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
