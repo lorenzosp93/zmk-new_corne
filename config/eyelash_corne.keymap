@@ -19,7 +19,7 @@
 
 #define TAPPING_TERM_MS 180
 #define TAPPING_TERM_SLOW_MS 220
-#define QUICK_TAP_MS 80
+#define QUICK_TAP_MS 100
 #define REQUIRE_PRIOR_IDLE_MS 120
 
 // Layers
